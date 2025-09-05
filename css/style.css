@@ -1,0 +1,482 @@
+/* Cores da bandeira italiana */
+:root {
+    --alpha-dkblue: #002042;
+    --alpha-white: #F4F5F0;
+    --alpha-dkblue2: #002042;
+    --alpha-dark: #222222;
+    --alpha-light: #f8f9fa;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 72px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s;
+    box-shadow: 0 2px 15px rgba(27, 0, 124, 0.1);
+}
+
+.bg-alpha {
+    background: #002042;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Carrossel */
+.carousel {
+    margin-top: -72px;
+}
+
+.carousel-image {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 8s linear;
+}
+
+.carousel-item.active .carousel-image {
+    transform: scale(1.1);
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption {
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+    border: 2px solid white;
+    background-color: transparent;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Cores temáticas */
+.text-alpha-dkblue {
+    color: var(--alpha-dkblue);
+}
+
+.text-alpha-dkblue2 {
+    color: var(--alpha-dkblue2);
+}
+
+.bg-alpha-light {
+    background-color: var(--alpha-light);
+}
+
+.bg-alpha-dark {
+    background-color: var(--alpha-dark);
+}
+
+.bg-alpha-gradient {
+    background: linear-gradient(135deg, var(--alpha-dkblue), var(--alpha-white), var(--alpha-dkblue2));
+}
+
+/* Botões */
+.btn-alpha {
+    background-color: var(--alpha-dkblue2);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-alpha:hover {
+    background-color: #002042;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(109, 109, 109, 0.3);
+}
+
+.btn-alpha-outline {
+    background-color: transparent;
+    color: var(--alpha-dkblue2);
+    border: 2px solid var(--alpha-dkblue2);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-alpha-outline:hover {
+    background-color: var(--alpha-dkblue2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(205, 33, 42, 0.3);
+}
+
+.btn-alpha-outline2 {
+    background-color: transparent;
+    color: var(--alpha-white);
+    border: 2px solid var(--alpha-white);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-alpha-outline2:hover {
+    background-color: var(--alpha-dkblue2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(205, 33, 42, 0.3);
+}
+
+/* Cards */
+.card-hover {
+    transition: all 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 4, 63, 0.39), rgba(134, 134, 134, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card-hover:hover .card-img-overlay {
+    opacity: 1;
+}
+
+.card-hover .card-img-top {
+    transition: transform 0.5s;
+}
+
+.card-hover:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.card-hover:hover .icon-circle {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Divisor */
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--alpha-dkblue), var(--alpha-white), var(--alpha-dkblue2));
+    margin: 1.5rem auto;
+}
+
+/* Citação */
+.alpha-quote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+    padding: 0 2rem;
+}
+
+/* Image frame */
+.image-frame {
+    position: relative;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-frame-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--alpha-dkblue);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Stats */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Social icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--alpha-dkblue2);
+    transform: translateY(-3px);
+    color: white;
+}
+
+.hero-section-turismo {
+    background: url('../img/sicilia.jpg') no-repeat center center/cover; 
+    position: relative;
+    height: 70vh; 
+    margin-top: -100px; 
+    padding: 20px;
+}
+
+.hero-section-turismo .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+}
+
+.hero-section-turismo .container {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-section-turismo h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.hero-section-turismo p {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.hero-section-info {
+    background: url('../img/ancient-map.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 70vh; 
+    margin-top: -100px; 
+    padding: 20px;
+}
+
+.hero-section-info .hero-overlay-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 100%;
+}
+
+.hero-section-info .container {
+    position: relative;
+
+}
+
+.hero-section-info h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.hero-section-info p {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; /
+}
+
+
+
+.hero-section-servicos {
+    background: url('../img/TESTE.png') no-repeat center center/cover; 
+    position: relative;
+    height: 70vh; 
+    margin-top: -100px; 
+    padding: 20px;
+}
+
+.hero-section-servicos .hero-overlay-servicos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 100%;
+}
+
+.hero-section-servicos .container {
+    position: relative;
+
+}
+
+.hero-section-servicos h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.hero-section-servicos p {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; /
+}
+
+
+
+.hero-section-cultura {
+    background: url('../img/italia.webp') no-repeat center center/cover; 
+    position: relative;
+    height: 70vh; 
+    margin-top: -100px; 
+    padding: 20px;
+}
+
+.hero-section-cultura .hero-overlay-cultura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 100%;
+}
+
+.hero-section-cultura .container {
+    position: relative;
+
+}
+
+.hero-section-cultura h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.hero-section-cultura p {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; /
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .carousel-image {
+        height: 80vh;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 60vh;
+    }
+    
+    .display-3 {
+        font-size: 2rem;
+    }
+}
